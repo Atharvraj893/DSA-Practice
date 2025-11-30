@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int size,value;
+    printf("How many element you want to insert in array : ");
+    scanf("%d",&size);
+    int arr[size];
+    for(int i=0;i<size;i++){
+        printf("Enter values : ");
+        scanf("%d",&value);
+        arr[i] = value;
+    }
+    int target,a,b;
+    int sum=0;
+    printf("Enter number : ");
+    scanf("%d",&target);
+    for(int i=0;i<size;i++){
+        a = arr[i]+arr[i+1];
+        if(a==target){
+            printf("%d,%d",i,i+1);
+        }
+    }
+    return 0;
+}
